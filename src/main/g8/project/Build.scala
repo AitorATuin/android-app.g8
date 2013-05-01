@@ -25,7 +25,10 @@ object General {
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
       libraryDependencies += "org.scalatest" %% "scalatest" % "$scalatest_version$" % "test"
+    ) ++ Seq (
+      compileOrder := CompileOrder.JavaThenScala
     )
+
 }
 
 object AndroidBuild extends Build {
